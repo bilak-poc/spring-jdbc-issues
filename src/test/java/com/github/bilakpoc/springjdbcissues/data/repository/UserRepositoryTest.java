@@ -29,7 +29,7 @@ class UserRepositoryTest extends AbstractIT {
   @Test
   void testQueryDsl() {
     final Optional<UserEntity> userOpt = userRepository.queryOne(
-      q -> q.select(userRepository.entityProjection()).where(USER.firstName.eq("John")));
+      q -> q.select(userRepository.entityProjection()).from(USER).where(USER.firstName.eq("John")));
   
     assertThat(userOpt.isPresent(), is(true));
   }
