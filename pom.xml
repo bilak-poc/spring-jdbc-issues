@@ -15,11 +15,17 @@
   <description>Demo project for Spring Boot</description>
   <properties>
     <java.version>11</java.version>
+    <infobip-spring-data-jdbc-querydsl.version>5.0.4</infobip-spring-data-jdbc-querydsl.version>
   </properties>
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jdbc</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.infobip</groupId>
+      <artifactId>infobip-spring-data-jdbc-querydsl-boot-starter</artifactId>
+      <version>${infobip-spring-data-jdbc-querydsl.version}</version>
     </dependency>
     <dependency>
       <groupId>org.liquibase</groupId>
