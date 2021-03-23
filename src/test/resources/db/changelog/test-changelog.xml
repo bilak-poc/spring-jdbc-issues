@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd">
+
+
+  <include file="db/changelog/changelog.xml" />
+
+  <changeSet id="04adea54-6e6d-4cff-aa5d-63407dada268" author="lukas.vasek">
+    <sql>
+      insert into users (id, first_name, last_name) values ('fd6fb204-1b6d-4a18-bcea-9da8aae47213','Alisa','Pekers');
+      insert into users (id, first_name, last_name) values ('c4609ac4-51bf-489d-9c0c-87421db37d2b','John','Hopkins');
+      insert into users (id, first_name, last_name) values ('e1f89baa-4f38-499c-a94c-2bc318f888e9','Pete','Doherty');
+      insert into users (id, first_name, last_name) values ('41d68f9d-6216-4d9e-8730-cc505c833e0a','John','Doe');
+    </sql>
+  </changeSet>
+
+  <changeSet id="02577c31-02e3-443f-81dc-749a0c50493e" author="lukas.vasek">
+    <sql>
+      insert into projects (id, name, owner) values ('d1bbb8af-50ca-49e3-8155-161ed197da6f','AP_1','fd6fb204-1b6d-4a18-bcea-9da8aae47213');
+      insert into projects (id, name, owner) values ('bfa1c7fa-f656-45ba-8107-8db40c71fe99','AP_2','fd6fb204-1b6d-4a18-bcea-9da8aae47213');
+      insert into projects (id, name, owner) values ('d36bdb28-e779-4445-9d66-ef039b126c7f','JH_1','c4609ac4-51bf-489d-9c0c-87421db37d2b');
+      insert into projects (id, name, owner) values ('0afa6028-4f91-4996-bb18-d4b7716ec754','JH_2','c4609ac4-51bf-489d-9c0c-87421db37d2b');
+      insert into projects (id, name, owner) values ('0290a5bb-e211-4528-809e-247a3178ee9d','PD_1','e1f89baa-4f38-499c-a94c-2bc318f888e9');
+      insert into projects (id, name, owner) values ('eeb61a7a-682f-4a52-93ba-b0705044733e','PD_2','e1f89baa-4f38-499c-a94c-2bc318f888e9');
+    </sql>
+  </changeSet>
+
+</databaseChangeLog>

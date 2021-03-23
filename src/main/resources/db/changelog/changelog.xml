@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd">
+
+  <changeSet id="e5be1328-9fd1-4714-8aaa-957427b0d99c" author="lukas.vasek">
+    <createTable tableName="users">
+      <column name="id" type="uuid"/>
+      <column name="first_name" type="varchar"/>
+      <column name="last_name" type="varchar"/>
+    </createTable>
+  </changeSet>
+
+  <changeSet id="39e6ab1b-1959-40cf-8d48-881d172921af" author="lukas.vasek">
+    <createTable tableName="projects">
+      <column name="id" type="uuid"/>
+      <column name="name" type="varchar"/>
+      <column name="owner" type="uuid"/>
+    </createTable>
+  </changeSet>
+
+</databaseChangeLog>
