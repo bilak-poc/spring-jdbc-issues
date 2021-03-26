@@ -4,9 +4,10 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
 import com.github.bilakpoc.springjdbcissues.AbstractIT;
@@ -19,9 +20,9 @@ class ProjectRepositoryTest extends AbstractIT {
   
   @Test
   void testPaging() {
-    final Page<ProjectEntity> projectsPage = projectRepository.findAllByOwner(ALISA_PEKERS, PageRequest.of(0, 1));
+    final List<ProjectEntity> projectsPage = projectRepository.findAllByOwner(ALISA_PEKERS, PageRequest.of(0, 1));
     assertThat(projectsPage, notNullValue());
-    assertThat(projectsPage.getContent().size(), is(1));
+    assertThat(projectsPage.size(), is(1));
   }
   
 }
